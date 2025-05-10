@@ -29,3 +29,4 @@ jobs:
         with:
           branch: gh-pages
           folder: dist/ScoreDartPro
+          token: ${{ secrets.DEPLOYMENT_TOKEN }}
