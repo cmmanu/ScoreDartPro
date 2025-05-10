@@ -2,6 +2,8 @@
 
 This project is a simple dart score board that allows you to keep track of your score while playing darts. It is a simple project that I created to learn more about Angular and Typescript.
 
+You can try it out [here](https://cmmanu.github.io/ScoreDartPro/).
+
 ## Features
 
 - Add players
