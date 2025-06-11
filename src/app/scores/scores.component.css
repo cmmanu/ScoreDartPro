@@ -1,28 +1,73 @@
-.score{
+.score {
     color: #cfa071;
     margin-left: 2vw;
+    margin-top: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
-.scoreButton{
-    font-weight: 400;
-    font-size: 2.5vw;
-    width: 20%;
-    min-height: 10vh;
-    border-radius: 10px;
+.scoreButton, .pressedButton {
+    font-weight: 500;
+    font-size: 1.2vw;
+    min-width: 70px;
+    width: 18vw;
+    max-width: 120px;
+    min-height: 8vh;
+    border-radius: 16px;
     margin: 5px;
-    color: white;
-    box-shadow: 3px 10px 20px #000;
-    background: linear-gradient(1turn,#0f0d0f,#2d2a2d 95%,#605860);
+    color: #fff;
+    box-shadow: 0 4px 16px #0004;
+    border: none;
+    outline: none;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    background: linear-gradient(135deg,#232526,#414345 95%,#cfa071);
+    cursor: pointer;
+    letter-spacing: 1px;
 }
 
-.pressedButton{
-    font-weight: 400;
-    font-size: 2.5vw;
-    width: 20%;
-    min-height: 10vh;
-    border-radius: 10px;
-    margin: 5px;
-    color: white;
-    box-shadow: 3px 10px 20px #000;
-    background: linear-gradient(1turn,#808080,#2d2a2d 95%,#605860);
+.scoreButton:hover:enabled, .pressedButton:hover:enabled {
+    background: linear-gradient(135deg,#cfa071,#414345 95%,#232526);
+    box-shadow: 0 8px 24px #cfa07144;
+    transform: translateY(-2px) scale(1.04);
+}
+
+.scoreButton:active:enabled, .pressedButton:active:enabled {
+    background: linear-gradient(135deg,#605860,#232526 95%,#cfa071);
+    box-shadow: 0 2px 8px #0006;
+    transform: scale(0.98);
+}
+
+.pressedButton {
+    background: linear-gradient(135deg,#cfa071,#414345 95%,#605860);
+    color: #232526;
+    font-weight: 700;
+    border: 2px solid #cfa071;
+}
+
+@media (max-width: 900px) {
+    .scoreButton, .pressedButton {
+        font-size: 2.5vw;
+        min-width: 60px;
+        width: 28vw;
+        min-height: 7vh;
+    }
+    .score {
+        gap: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .scoreButton, .pressedButton {
+        font-size: 4vw;
+        min-width: 48px;
+        width: 38vw;
+        min-height: 6vh;
+        border-radius: 10px;
+    }
+    .score {
+        margin-left: 0;
+        gap: 4px;
+    }
 }
